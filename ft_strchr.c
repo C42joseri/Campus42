@@ -6,11 +6,19 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 18:47:47 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/09 18:47:48 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/10 11:50:04 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
+
 char *strchr(const char *s, int c)
 {
-    
+    int i;
+
+    i = 0;
+    while(s[c] != '\0')
+    {
+        
+    }
 }
