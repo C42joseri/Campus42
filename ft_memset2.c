@@ -1,38 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memset2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 12:17:07 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/11 17:22:25 by jose-rig         ###   ########.fr       */
+/*   Created: 2024/04/11 18:10:43 by jose-rig          #+#    #+#             */
+/*   Updated: 2024/04/11 18:25:48 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
 void *ft_memset(void *b, int c, size_t len)
 {
-    size_t i;
-    unsigned char *str = b;
+    unsigned char *p;
+    unsigned char ch;
 
-    i = 0;
-    while(i < len && str[i] != '\0')
+    p = (unsigned char *)b;
+    ch = c;
+    while (len--)
     {
-        str[i] = (unsigned char) c;
-        i++;
+        *p = ch;
+        p++;
     }
-    return(str);
+    return (b);
 }
+
 int main(void)
 {
-    char str[] = "0123";
-    int c = '.c';
-    size_t len = 4;
-    
-    printf("String original: \n%s", str);
-    printf("\nString modificado: \n%s", ft_memset(str, c, len));
+    unsigned char str[] = "012345";
+    int x = '.';
+    size_t len = 2;
+
+    printf("String modificad \n %s", ft_memset(str, x, len));
     return(0);
 }
