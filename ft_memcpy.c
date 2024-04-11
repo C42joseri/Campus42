@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 12:17:07 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/11 12:34:30 by jose-rig         ###   ########.fr       */
+/*   Created: 2024/04/11 14:33:50 by jose-rig          #+#    #+#             */
+/*   Updated: 2024/04/11 14:34:41 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
 
-void *ft_memset(void *b, int c, size_t len)
+void *ft_memset(void *restrict dst, const void *restrict src, size_t n)
 {
     size_t i;
     unsigned char *str = b;
