@@ -3,19 +3,16 @@
 
 void *ft_memset(void *b, int c, size_t len)
 {
-    unsigned char *str = b;
-    unsigned char ch = c;
+    unsigned char *p = b;
     size_t i;
 
-    i = 0;
-    while(str[i] != '\0' && i < len)
+    while(len-- &&  *p != '\0')
     {
-        str[i] = ch;
-        i++;
+        *p = c;
+        p++;
     }
-    return(b);
+    return(p);
 }
-
 int main(void)
 {
     unsigned char b[] = "012345";

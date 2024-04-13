@@ -16,4 +16,4 @@ int main(void)
     c = ft_isprint('a');
     printf("%d", c);
     return(0);
-}
+}*/

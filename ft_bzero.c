@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset2.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 18:10:43 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/11 18:25:48 by jose-rig         ###   ########.fr       */
+/*   Created: 2024/04/13 10:08:22 by jose-rig          #+#    #+#             */
+/*   Updated: 2024/04/13 13:09:15 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-void *ft_memset(void *b, int c, size_t len)
+void ft_bzero(void *s, size_t n)
 {
-    unsigned char *p;
-    unsigned char ch;
-
-    p = (unsigned char *)b;
-    ch = c;
-    while (len--)
+    unsigned char *str = s;
+    size_t i;
+    
+    i = 0;
+    while (str[i] != '\0' && i < n)
     {
-        *p = ch;
-        p++;
+        str[i] = '0';
+        i++;
     }
-    return (b);
 }
 
 int main(void)
 {
-    unsigned char str[] = "012345";
-    int x = '.';
-    size_t len = 2;
-
-    printf("String modificad \n %s", ft_memset(str, x, len));
-    return(0);
+    unsigned char str[] = "0123Son 4 ceros";
+    size_t x = 4;
+    ft_bzero(str, x);
+    printf("%s", str);
+    return (0);
 }

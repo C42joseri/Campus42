@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memset3.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 17:58:43 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/13 17:59:01 by jose-rig         ###   ########.fr       */
+/*   Created: 2024/04/11 18:31:01 by jose-rig          #+#    #+#             */
+/*   Updated: 2024/04/12 18:59:35 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+#include <stdio.h>
+#include <string.h>
+
+void *ft_memset(void *b, int c, size_t len)
 {
-    if (c >= '0' && c <= '9')
+    char *p;
+
+    p = (char *)b;
+    while(len > 0)
     {
-        return (1);
+        p[len - 1] = c;
+        len--;
     }
-    return (0);
+    return(b);
 }
 
-/*
-#include <stdio.h>
 int main(void)
 {
-    int c;
+    unsigned char str[] = "012345";
+    int x = '.';
+    size_t len = 2;
 
-    c = ft_isdigit('a');
-    printf("%d", c);
+    printf("String modificad \n %s", ft_memset(str, x, len));
     return(0);
-}*/
+}

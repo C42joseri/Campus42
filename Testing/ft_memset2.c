@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset3.c                                       :+:      :+:    :+:   */
+/*   ft_memset2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 18:31:01 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/11 18:33:40 by jose-rig         ###   ########.fr       */
+/*   Created: 2024/04/11 18:10:43 by jose-rig          #+#    #+#             */
+/*   Updated: 2024/04/12 18:59:13 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 
 void *ft_memset(void *b, int c, size_t len)
 {
-    char *p;
+    unsigned char *p;
+    unsigned char ch;
 
-    p = (char *)b;
-    while(len > 0)
+    p = (unsigned char *)b;
+    ch = c;
+    while (len--)
     {
-        p[len - 1] = c;
-        len--;
+        *p = ch;
+        p++;
     }
-    return(b);
+    return (p);
 }
 
 int main(void)
@@ -34,4 +36,4 @@ int main(void)
 
     printf("String modificad \n %s", ft_memset(str, x, len));
     return(0);
-}
+} 

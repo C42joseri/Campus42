@@ -1,4 +1,14 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstring.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/13 17:58:09 by jose-rig          #+#    #+#             */
+/*   Updated: 2024/04/13 18:02:01 by jose-rig         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 void ft_putchar(char c)
 {
@@ -17,6 +27,9 @@ void ft_putstring(char *str)
     }
 }
 
+/*
+#include <stdio.h>
+#include <unistd.h>
 int main(int argc, char *argv[])
 {
     if(argc != 2)
@@ -27,4 +40,4 @@ int main(int argc, char *argv[])
     char *str = argv[1];
     ft_putstring(str);
     return(0);
-}
+}*/
