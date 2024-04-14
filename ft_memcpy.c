@@ -6,7 +6,7 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:33:50 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/13 13:17:42 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/14 12:56:27 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main(void)
 {
     char src[] = "Hola que tal";
     char dst[] = "Muy bien.";
-    size_t x = 3;
-    printf("%s", memcpy(dst, src, x));
+    size_t x = 23;
+    printf("%s", ft_memcpy(dst, src, x));
     return (0);
 }
