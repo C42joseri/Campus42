@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 14:33:50 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/14 12:56:27 by jose-rig         ###   ########.fr       */
+/*   Created: 2024/04/13 10:08:22 by jose-rig          #+#    #+#             */
+/*   Updated: 2024/04/14 18:31:30 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+void ft_bzero(void *s, size_t n)
 {
+    unsigned char *str = s;
     size_t i;
-    char *d;
-    char *s;
     
     i = 0;
-    d = (char *)dst;
-    s = (char *)src;
-    while(i < n)
+    while (str[i] != '\0' && i < n)
     {
-        d[i] = s[i];
+        str[i] = '\0';
         i++;
     }
-    return (dst);
 }
 
 int main(void)
 {
-    char src[] = "Hola que tal";
-    char dst[] = "Muy bien.";
-    size_t x = 23;
-    printf("%s", ft_memcpy(dst, src, x));
+    unsigned char str[] = "0123Son 4 ceros";
+    size_t x = 4;
+    ft_bzero(str, x);
+    printf("%s", str);
     return (0);
 }

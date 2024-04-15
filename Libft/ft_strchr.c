@@ -1,36 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 10:08:22 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/13 13:09:15 by jose-rig         ###   ########.fr       */
+/*   Created: 2024/04/09 18:47:47 by jose-rig          #+#    #+#             */
+/*   Updated: 2024/04/15 19:12:59 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <string.h>
+#include <stdio.h>
 
-void ft_bzero(void *s, size_t n)
+char *ft_strchr(const char *s, int c)
 {
-    unsigned char *str = s;
-    size_t i;
-    
-    i = 0;
-    while (str[i] != '\0' && i < n)
+    while(*s != '\0')
     {
-        str[i] = '0';
-        i++;
+        if(*s == c)
+        {
+            return((char *)s);
+        }
+        s++;
     }
+    if (c == '\0')
+    {
+        return((char *)s);
+    }
+    return(0);
 }
+
 
 int main(void)
 {
-    unsigned char str[] = "0123Son 4 ceros";
-    size_t x = 4;
-    ft_bzero(str, x);
-    printf("%s", str);
-    return (0);
+    const char string[] = "Donde esta el punto. Aqui esta";
+    int x;
+    x = 'z';
+    printf("El . :\n%s", ft_strchr(string, x));
+    return(0);
 }

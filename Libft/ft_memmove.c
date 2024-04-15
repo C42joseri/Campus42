@@ -6,7 +6,7 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 13:12:05 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/14 13:06:28 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/15 13:31:56 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,9 +43,9 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 
 int main(void)
 {
-    unsigned char dest[] = "ABCDEFGHIJK";
-    unsigned char source[] = "12345";
-    size_t x = 2;
+    unsigned char source[] = "123456";
+    unsigned char dest[] = "ABCDEF";
+    size_t x = 5;
     printf("%s", ft_memmove(dest, source, x));
     return(0);
 }
