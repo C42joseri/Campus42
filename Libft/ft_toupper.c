@@ -6,24 +6,15 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 18:01:21 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/13 18:01:32 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/16 18:24:36 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if(c >= 97 && c <= 122)
-    {
-      return(c - 32);
-    }
-  return(c);
+	if (c >= 97 && c <= 122)
+	{
+		return (c - 32);
+	}
+	return (c);
 }
-/*
-#include <stdio.h>
-int main(void)
-{
-    printf("%c", ft_toupper('a'));
-    return(0);
-}
-*/

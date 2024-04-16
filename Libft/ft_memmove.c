@@ -6,48 +6,32 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 13:12:05 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/15 13:31:56 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/16 17:50:14 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-
-void *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    size_t n;
-    
-    n = 0;
-    if(src < dst)
-    {
-        n = len;
-        while(n > 0)
-        {
-            n--;
-            ((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
-        }
-    }
-    else
-    {
-        n = 0;
-        while(n < len)
-        {
-            ((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
-            n++;
-        }
-    }
-    return(dst);
-}
-#include <stdio.h>
-#include <string.h>
+	size_t	n;
 
-int main(void)
-{
-    unsigned char source[] = "123456";
-    unsigned char dest[] = "ABCDEF";
-    size_t x = 5;
-    printf("%s", ft_memmove(dest, source, x));
-    return(0);
+	n = 0;
+	if (src < dst)
+	{
+		n = len;
+		while (n > 0)
+		{
+			n--;
+			((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
+		}
+	}
+	else
+	{
+		n = 0;
+		while (n < len)
+		{
+			((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
+			n++;
+		}
+	}
+	return (dst);
 }
-/*Si dest > src: CON source 12 y x = 3, sale 12 porque del 2 en adelante son nulos
-en cambio con x = 2 sale 12CDEFGHI porque no lee el nulo y sigue con el dest*/

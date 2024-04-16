@@ -6,26 +6,15 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 17:58:43 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/13 17:59:01 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/16 17:44:48 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if (c >= '0' && c <= '9')
-    {
-        return (1);
-    }
-    return (0);
+	if (c >= '0' && c <= '9')
+	{
+		return (1);
+	}
+	return (0);
 }
-
-/*
-#include <stdio.h>
-int main(void)
-{
-    int c;
-
-    c = ft_isdigit('a');
-    printf("%d", c);
-    return(0);
-}*/

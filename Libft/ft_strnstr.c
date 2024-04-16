@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 17:31:04 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/16 19:17:47 by jose-rig         ###   ########.fr       */
+/*   Created: 2024/04/16 12:24:31 by jose-rig          #+#    #+#             */
+/*   Updated: 2024/04/16 18:02:24 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	unsigned char	*str;
-	unsigned char	ch;
-	size_t			i;
+	size_t	i;
+	size_t	j;
 
-	str = (unsigned char *)b;
-	ch = (unsigned char *)c;
 	i = 0;
-	while (str[i] != '\0' && i < len)
+	j = 0;
+	if (needle == '\0' || needle[0] == '\0')
+		return ((char *)haystack);
+	while (haystack[i] != '\0' && i < len)
 	{
-		str[i] = ch;
+		if (haystack[i] == needle[j])
+		{
+			while (haystack[i + j] == needle[j] && i + j < len)
+			{
+				if (needle[j + 1] == '\0')
+					return ((char *)haystack + i);
+				j++;
+			}
+			j = 0;
+		}
 		i++;
 	}
-	return (b);
+	return (0);
 }

@@ -6,27 +6,15 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 17:58:39 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/13 17:58:56 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/16 17:43:01 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if (c >= 0 && c <= 127)
-    {
-        return (1);
-    }
-    return (0);
+	if (c >= 0 && c <= 127)
+	{
+		return (1);
+	}
+	return (0);
 }
-
-
-/*
-#include <stdio.h>
-int main(void)
-{
-    int c;
-
-    c = ft_isascii('a');
-    printf("%d", c);
-    return(0);
-}*/

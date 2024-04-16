@@ -1,39 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset2.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/11 18:10:43 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/16 16:36:57 by jose-rig         ###   ########.fr       */
+/*   Created: 2024/04/09 18:47:47 by jose-rig          #+#    #+#             */
+/*   Updated: 2024/04/16 16:49:04 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <string.h>
+#include <stdio.h>
 
-void *ft_memset(void *b, int c, size_t len)
+char *ft_strchr(const char *s, int c)
 {
-    unsigned char *p;
-    unsigned char ch;
-
-    p = (unsigned char *)b;
-    ch = c;
-    while (len--)
+    while(*s != '\0')
     {
-        *p = ch;
-        p++;
+        if(*s == c)
+        {
+            return((char *)s);
+        }
+        s++;
     }
-    return (b);
+    if (c == '\0')
+    {
+        return((char *)s);
+    }
+    return(0);
 }
+
 
 int main(void)
 {
-    unsigned char str[] = "012345";
-    int x = '.';
-    size_t len = 2;
-
-    printf("String modificad \n %s", ft_memset(str, x, len));
+    const char string[] = "Donde esta el punto. Aqui esta";
+    int x;
+    x = '.';
+    printf("El . :\n%s", ft_strchr(string, x));
     return(0);
-} 
+}

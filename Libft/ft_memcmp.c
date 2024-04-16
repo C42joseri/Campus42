@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 17:31:04 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/16 19:17:47 by jose-rig         ###   ########.fr       */
+/*   Created: 2024/04/16 17:32:09 by jose-rig          #+#    #+#             */
+/*   Updated: 2024/04/16 17:45:59 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *b, int c, size_t len)
+int	memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*str;
-	unsigned char	ch;
-	size_t			i;
+	char	*str1;
+	char	*str2;
+	size_t	i;
 
-	str = (unsigned char *)b;
-	ch = (unsigned char *)c;
 	i = 0;
-	while (str[i] != '\0' && i < len)
+	str1 = (char *)s1;
+	str2 = (char *)s2;
+	while (i < n)
 	{
-		str[i] = ch;
+		if (str1[i] != str2[i])
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 		i++;
 	}
-	return (b);
+	return (0);
 }

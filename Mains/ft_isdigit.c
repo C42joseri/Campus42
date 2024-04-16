@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 17:31:04 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/16 19:17:47 by jose-rig         ###   ########.fr       */
+/*   Created: 2024/04/13 17:58:43 by jose-rig          #+#    #+#             */
+/*   Updated: 2024/04/13 17:59:01 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *b, int c, size_t len)
+int ft_isdigit(int c)
 {
-	unsigned char	*str;
-	unsigned char	ch;
-	size_t			i;
-
-	str = (unsigned char *)b;
-	ch = (unsigned char *)c;
-	i = 0;
-	while (str[i] != '\0' && i < len)
-	{
-		str[i] = ch;
-		i++;
-	}
-	return (b);
+    if (c >= '0' && c <= '9')
+    {
+        return (1);
+    }
+    return (0);
 }
+
+/*
+#include <stdio.h>
+int main(void)
+{
+    int c;
+
+    c = ft_isdigit('a');
+    printf("%d", c);
+    return(0);
+}*/

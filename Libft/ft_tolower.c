@@ -6,23 +6,15 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 18:01:12 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/13 18:01:19 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/16 18:14:42 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-    if(c >= 65 && c <= 90)
-    {
-      return(c + 32);
-    }
-  return(c);
+	if (c >= 65 && c <= 90)
+	{
+		return (c + 32);
+	}
+	return (c);
 }
-
-/*#include <stdio.h>
-int main(void)
-{
-    printf("%c", ft_tolower('a'));
-    return(0);
-}
-*/

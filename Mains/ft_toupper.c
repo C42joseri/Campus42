@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 17:31:04 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/16 19:17:47 by jose-rig         ###   ########.fr       */
+/*   Created: 2024/04/13 18:01:21 by jose-rig          #+#    #+#             */
+/*   Updated: 2024/04/13 18:01:32 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *b, int c, size_t len)
-{
-	unsigned char	*str;
-	unsigned char	ch;
-	size_t			i;
 
-	str = (unsigned char *)b;
-	ch = (unsigned char *)c;
-	i = 0;
-	while (str[i] != '\0' && i < len)
-	{
-		str[i] = ch;
-		i++;
-	}
-	return (b);
+int ft_toupper(int c)
+{
+    if(c >= 97 && c <= 122)
+    {
+      return(c - 32);
+    }
+  return(c);
 }
+/*
+#include <stdio.h>
+int main(void)
+{
+    printf("%c", ft_toupper('a'));
+    return(0);
+}
+*/
