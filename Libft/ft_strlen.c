@@ -6,9 +6,11 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 17:59:19 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/16 19:16:21 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/17 18:16:25 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

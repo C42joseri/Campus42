@@ -6,9 +6,11 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 12:07:36 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/16 19:15:05 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/17 18:16:15 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

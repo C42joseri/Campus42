@@ -6,34 +6,34 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 16:29:33 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/16 18:12:06 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/17 20:56:21 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	unsigned char	ch;
+	size_t			i;
 
+	i = 0;
 	ch = c;
-	while (*s != '\0')
+	while (s[i] != '\0')
 	{
-		s++;
+		i++;
 	}
-	while (*s != ch)
+	if (ch == 0)
 	{
-		s--;
-		if (*s == ch)
+		return (&((char *)s)[i]);
+	}
+	while (i > 0)
+	{
+		i--;
+		if (s[i] == ch)
 		{
-			return ((char *)s);
-		}
-		else
-		{
-			return (0);
+			return (&((char *)s)[i]);
 		}
 	}
-	if (ch == '\0')
-	{
-		return ((char *)s);
-	}
-	return (0);
+	return (NULL);
 }

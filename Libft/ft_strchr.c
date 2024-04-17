@@ -6,23 +6,29 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 18:47:47 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/16 17:54:40 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/17 21:00:40 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strchr(const char *str, int c)
 {
-	while (*s != '\0')
+	int				i;
+	unsigned char	ch;
+
+	i = 0;
+	ch = c;
+	if (ch == '\0')
 	{
-		if (*s == c)
-		{
-			return ((char *)s);
-		}
-		s++;
+		i = ft_strlen(str);
+		return ((char *)str + i++);
 	}
-	if (c == '\0')
+	while (str[i])
 	{
-		return ((char *)s);
+		if (str[i] == ch)
+			return ((char *)str + i);
+		i++;
 	}
-	return (0);
+	return (NULL);
 }

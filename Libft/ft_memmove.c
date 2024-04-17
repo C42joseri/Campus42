@@ -6,9 +6,11 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 13:12:05 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/16 17:50:14 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/17 18:15:57 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

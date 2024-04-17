@@ -6,9 +6,11 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/14 17:10:08 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/16 19:16:05 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/17 18:16:19 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
