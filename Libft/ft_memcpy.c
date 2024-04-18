@@ -6,7 +6,7 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 14:33:50 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/17 18:15:53 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/18 20:35:48 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	d = (char *)dst;
 	s = (char *)src;
+	if(dst == NULL && src == NULL && n != 0)
+		return(NULL);
 	while (i < n)
 	{
 		d[i] = s[i];
