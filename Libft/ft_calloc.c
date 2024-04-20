@@ -1,41 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/13 13:12:05 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/19 15:38:19 by jose-rig         ###   ########.fr       */
+/*   Created: 2024/04/19 15:47:42 by jose-rig          #+#    #+#             */
+/*   Updated: 2024/04/19 15:51:52 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void *ft_calloc(size_t count, size_t size)
 {
-	size_t	n;
+    unsigned char *tmp;
+    size_t i;
 
-	n = 0;
-	if (dst == NULL && src == NULL && len != 0)
-		return (NULL);
-	if (src < dst)
-	{
-		n = len;
-		while (n > 0)
-		{
-			n--;
-			((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
-		}
-	}
-	else
-	{
-		n = 0;
-		while (n < len)
-		{
-			((unsigned char *)dst)[n] = ((unsigned char *)src)[n];
-			n++;
-		}
-	}
-	return (dst);
+    i = 0;
+    tmp = malloc(count * size);
+    if (!tmp)
+        return (NULL);
+    while (i < count * size)
+        tmp[i] = 0;
+    return (tmp);
 }
