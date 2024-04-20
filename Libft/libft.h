@@ -6,7 +6,7 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:29:57 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/19 16:50:20 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/20 19:34:43 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <stddef.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -38,5 +39,7 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
