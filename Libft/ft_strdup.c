@@ -6,7 +6,7 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 14:55:12 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/20 20:33:17 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/21 21:49:42 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strdup(const char *s1)
 		slen++;
 	}
 	snew = (char *) malloc(slen + 1);
-	if (!s1[i])
+	if (!snew)
 		return (NULL);
 	while (s1[i] != '\0')
 	{
