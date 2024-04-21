@@ -6,7 +6,7 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:47:36 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/20 20:25:16 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/21 18:57:07 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,18 +20,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t			c;
 
 	c = 0;
-	if (len > ft_strlen(s))
-		len = (ft_strlen(s) - start);
 	if (start > ft_strlen(s))
 		len = 0;
+	if (len > ft_strlen(s) - start)
+		len = (ft_strlen(s) - start);
 	sub = (char *) malloc(len + 1);
 	if (!s || !sub)
 		return (NULL);
-	if (start >= ft_strlen(s))
-	{
-		sub[0] = '\0';
-		return (sub);
-	}
 	while (s[c] != '\0' && c < len)
 	{
 		sub[c] = s[start];
@@ -49,4 +44,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
     printf("\n%s", ft_substr(str, begin, max));
     return (0);
 }
+if (start >= ft_strlen(s))
+	{
+		sub[0] = '\0';
+		return (sub);
+	}
+	^sobra
 */
