@@ -6,13 +6,11 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:47:36 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/21 18:57:07 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/04/23 18:50:26 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
