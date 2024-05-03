@@ -6,7 +6,7 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/20 18:47:36 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/04/23 18:50:26 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/05/02 19:33:51 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[c] = '\0';
 	return (sub);
 }
-/*int main(void)
-{
-    const char str[] = "Se copia o no??";
-    unsigned int begin = 3;
-    size_t max = 8;
-    printf("\n%s", ft_substr(str, begin, max));
-    return (0);
-}
-if (start >= ft_strlen(s))
-	{
-		sub[0] = '\0';
-		return (sub);
-	}
-	^sobra
-*/
