@@ -6,7 +6,7 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 18:29:57 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/05/03 17:43:43 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/05/04 18:36:04 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,16 @@
 # include <unistd.h>
 # include <string.h>
 # include <stddef.h>
+# ifndef S_LIST
+#  define S_LIST
+
+typedef struct	s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
+# endif
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -51,5 +61,6 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+t_list	*ft_lstnew(void *content);
 
 #endif

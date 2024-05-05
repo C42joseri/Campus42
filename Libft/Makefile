@@ -9,6 +9,10 @@ SOURCES = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c\
 		  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
 		  ft_putnbr_fd.c\
 
+SOURCES_BONUS = ft_lstnew.c
+
+OBJECTS_BONUS = $(SOURCES_BONUS:.c=.o)
+
 OBJECTS = $(SOURCES:.c=.o)
 
 CC = gcc
@@ -17,18 +21,21 @@ CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME): $(OBJECTS)
-	ar rcs $@ $(OBJECTS)
+$(NAME): $(OBJECTS) $(OBJECTS_BONUS)
+	ar rcs $@ $(OBJECTS) $(OBJECTS_BONUS)
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
 
+bonus: $(OBJECTS_BONUS)
+	ar rcs $@ $(OBJECTS_BONUS)
+
 clean:
-	rm -f $(OBJECTS)
+	rm -f $(OBJECTS) $(OBJECTS_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
