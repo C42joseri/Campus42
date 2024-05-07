@@ -6,7 +6,7 @@
 /*   By: jose-rig <jose-rig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 12:52:35 by jose-rig          #+#    #+#             */
-/*   Updated: 2024/05/05 13:10:27 by jose-rig         ###   ########.fr       */
+/*   Updated: 2024/05/07 19:59:23 by jose-rig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,17 +51,3 @@ char	*ft_itoa(int n)
 		*(str_num + 0) = '-';
 	return (str_num);
 }
-
-/*
-si el numero es negativo hay que sumarle uno a 
-digitos para alocar el signo negativo
-#include <stdio.h>
-int main ()
-{
-	int	x;
-	x = (-1222131);
-
-	printf("%s",ft_itoa(x));
-	return (0);
-}
-*/
